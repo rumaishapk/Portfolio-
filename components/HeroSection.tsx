@@ -17,37 +17,77 @@ export default function HeroSection() {
         {/* --- ARTISTIC "RUMAISHA ‘26" CUTOUT TYPOGRAPHY + AVATAR --- */}
         <div className="relative w-full flex items-center justify-center min-h-[460px] sm:min-h-[540px] md:min-h-[600px]">
           
+          {/* Scoped styles ensuring individual letter hover animation applies immediately */}
+          <style>{`
+            @keyframes rumaishaLetterBob {
+              0%, 100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-26px);
+              }
+            }
+
+            .rumaisha-letter-target {
+              display: inline-block;
+              cursor: pointer;
+              position: relative;
+            }
+
+            .rumaisha-letter-glyph {
+              display: inline-block;
+              transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease, filter 0.2s ease;
+              will-change: transform;
+            }
+
+            /* Moves up and down ONLY when hovering over that specific letter */
+            .rumaisha-letter-target:hover .rumaisha-letter-glyph {
+              animation: rumaishaLetterBob 1.05s ease-in-out infinite;
+              color: #06b6d4 !important;
+              filter: drop-shadow(0 12px 24px rgba(6, 182, 212, 0.45));
+            }
+          `}</style>
+
           {/* BACKGROUND BOLD ARTISTIC CUTOUT TYPOGRAPHY (Spelling RUMAISHA) */}
-          <div className="absolute inset-x-0 top-0 sm:top-2 flex items-start justify-center select-none pointer-events-none z-0">
-            <div className="relative flex items-center justify-center font-black tracking-tighter text-[#0891b2] leading-none drop-shadow-[0_8px_24px_rgba(8,145,178,0.18)]">
+          <div className="absolute inset-x-0 top-0 sm:top-2 flex items-start justify-center select-none pointer-events-auto z-0">
+            <div 
+              className="relative flex items-center justify-center font-black tracking-tighter text-[#0891b2] leading-none drop-shadow-[0_8px_24px_rgba(8,145,178,0.18)]"
+              title="Rumaisha"
+            >
               
               {/* LEFT GROUP: R U M (Arched over left shoulder) */}
               <div className="flex items-center text-6xl sm:text-8xl md:text-[120px] lg:text-[145px] font-black text-[#0891b2] pr-1 sm:pr-3">
-                <span className="transform -rotate-6 inline-block">R</span>
-                <span className="transform rotate-2 inline-block -ml-2 sm:-ml-4">U</span>
-                <span className="transform -rotate-3 inline-block -ml-2 sm:-ml-4">M</span>
+                <span className="rumaisha-letter-target transform -rotate-6 inline-block">
+                  <span className="rumaisha-letter-glyph">R</span>
+                </span>
+                <span className="rumaisha-letter-target transform rotate-2 inline-block -ml-2 sm:-ml-4">
+                  <span className="rumaisha-letter-glyph">U</span>
+                </span>
+                <span className="rumaisha-letter-target transform -rotate-3 inline-block -ml-2 sm:-ml-4">
+                  <span className="rumaisha-letter-glyph">M</span>
+                </span>
               </div>
 
               {/* CENTER TALL CROSS 'A' (Towering centerpiece like reference) */}
               <div className="relative flex flex-col items-center -mt-8 sm:-mt-14 z-20">
-                <span className="text-8xl sm:text-[140px] md:text-[180px] lg:text-[210px] font-black text-[#0891b2] leading-none">
-                  A
+                <span className="rumaisha-letter-target text-8xl sm:text-[140px] md:text-[180px] lg:text-[210px] font-black text-[#0891b2] leading-none inline-block">
+                  <span className="rumaisha-letter-glyph">A</span>
                 </span>
               </div>
 
               {/* RIGHT GROUP: I S H A */}
               <div className="relative flex items-center text-6xl sm:text-8xl md:text-[120px] lg:text-[145px] font-black text-[#0891b2] pl-1 sm:pl-3">
-                <span className="transform -rotate-2 inline-block mx-0.5 sm:mx-1 text-[#0891b2]">
-                  I
+                <span className="rumaisha-letter-target transform -rotate-2 inline-block mx-0.5 sm:mx-1 text-[#0891b2]">
+                  <span className="rumaisha-letter-glyph">I</span>
                 </span>
-                <span className="transform rotate-3 inline-block -ml-1 sm:-ml-3 text-[#0891b2]">
-                  S
+                <span className="rumaisha-letter-target transform rotate-3 inline-block -ml-1 sm:-ml-3 text-[#0891b2]">
+                  <span className="rumaisha-letter-glyph">S</span>
                 </span>
-                <span className="transform -rotate-2 inline-block -ml-1 sm:-ml-3 text-[#0891b2]">
-                  H
+                <span className="rumaisha-letter-target transform -rotate-2 inline-block -ml-1 sm:-ml-3 text-[#0891b2]">
+                  <span className="rumaisha-letter-glyph">H</span>
                 </span>
-                <span className="transform -rotate-6 inline-block -ml-1 sm:-ml-3 text-[#0891b2]">
-                  A
+                <span className="rumaisha-letter-target transform -rotate-6 inline-block -ml-1 sm:-ml-3 text-[#0891b2]">
+                  <span className="rumaisha-letter-glyph">A</span>
                 </span>
               </div>
 
@@ -55,9 +95,9 @@ export default function HeroSection() {
           </div>
 
           {/* CENTRAL AVATAR (User's real avatar wearing turquoise dress & white hijab) */}
-          <div className="relative z-10 mt-12 sm:mt-16 w-[310px] sm:w-[390px] md:w-[450px] pointer-events-auto transition-transform hover:scale-[1.015] duration-300 flex items-center justify-center">
+          <div className="relative z-10 mt-12 sm:mt-16 w-[310px] sm:w-[390px] md:w-[450px] pointer-events-none transition-transform hover:scale-[1.015] duration-300 flex items-center justify-center">
             {/* Soft turquoise backlight halo behind avatar */}
-            <div className="absolute inset-4 rounded-full bg-gradient-to-t from-cyan-400/25 via-teal-300/20 to-transparent blur-2xl -z-10" />
+            <div className="absolute inset-4 rounded-full bg-gradient-to-t from-cyan-400/25 via-teal-300/20 to-transparent blur-2xl -z-10 pointer-events-none" />
 
             <Image
               src="/rumaisha.png"
@@ -65,7 +105,7 @@ export default function HeroSection() {
               width={520}
               height={520}
               priority
-              className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(8,145,178,0.22)] select-none"
+              className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(8,145,178,0.22)] select-none pointer-events-none"
             />
           </div>
 
