@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import LanyardBadge from "./LanyardBadge";
-import { Mail, Phone, ExternalLink, Copy, Check, GraduationCap, Cpu, Layers, Cloud, Sparkles, Terminal } from "lucide-react";
+import { Mail, Phone, ExternalLink, Copy, Check, GraduationCap } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 
 export default function AboutSection() {
@@ -43,13 +43,13 @@ export default function AboutSection() {
             {/* Heading: "HI, I'm Rumaisha" */}
             <div className="mb-4">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-stone-900 font-sans">
-                HI, I'm <span className="text-[#0891b2]">Rumaisha</span>
+                HI, I&apos;m <span className="text-[#0891b2]">Rumaisha</span>
               </h2>
             </div>
 
             {/* Narrative Bio paragraph */}
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal max-w-2xl mb-8">
-              I am a Frontend & Full-Stack Developer and I build modern web applications because I love solving problems, questioning &lsquo;why&rsquo;, and making things feel right. Development isn&rsquo;t just about writing code; it&rsquo;s about people, smooth workflows, and the fine details that make a product intuitive and reliable. If it feels effortless without overthinking, I&rsquo;ve done my job.
+              I am a Junior Software Engineer and I build modern web applications because I love solving problems, questioning &lsquo;why&rsquo;, and making things feel right. Development isn&rsquo;t just about writing code; it&rsquo;s about people, smooth workflows, and the fine details that make a product intuitive and reliable. If it feels effortless without overthinking, I&rsquo;ve done my job.
             </p>
 
             {/* --- 3-COLUMN STRUCTURED INFO (EXPERIENCE / EDUCATION / CONTACT) --- */}

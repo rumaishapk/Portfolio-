@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowDown, Mail, ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 
 export default function HeroSection() {
@@ -101,7 +101,7 @@ export default function HeroSection() {
 
             <Image
               src="/rumaisha.png"
-              alt="Rumaisha - Frontend & Full-Stack Developer"
+              alt="Rumaisha - Junior Software Engineer"
               width={520}
               height={520}
               priority
@@ -117,7 +117,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-2">
             <h1 className="text-xs sm:text-sm md:text-base font-semibold tracking-wider uppercase text-cyan-950 bg-cyan-50/90 border border-cyan-200/90 px-4 py-1.5 rounded-full shadow-xs flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-              <span>Frontend & Full-Stack Developer</span>
+              <span>Junior Software Engineer</span>
             </h1>
           </div>
 

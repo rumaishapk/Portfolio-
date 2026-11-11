@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Mail, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
           </span>
           <span className="text-[10px] text-stone-500 font-mono -mt-0.5 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
-            Full-Stack Developer
+            Junior Software Engineer
           </span>
         </a>
 

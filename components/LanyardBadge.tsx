@@ -99,7 +99,7 @@ export default function LanyardBadge() {
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                 <span className="text-[10px] font-semibold tracking-wider uppercase text-cyan-200">PASS &lsquo;26</span>
               </div>
-              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-cyan-200 font-medium">FULL-STACK</span>
+              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-cyan-200 font-medium">JR. ENGINEER</span>
             </div>
 
             {/* Profile Photo & Info */}
@@ -123,7 +123,7 @@ export default function LanyardBadge() {
 
               {/* Name & Title */}
               <h3 className="text-base font-black tracking-tight text-stone-900 uppercase">Rumaisha</h3>
-              <p className="text-[11px] font-semibold text-cyan-800 mt-0.5">Frontend & Full-Stack Dev</p>
+              <p className="text-[11px] font-semibold text-cyan-800 mt-0.5">Junior Software Engineer</p>
               
               {/* Quick tags */}
               <div className="flex items-center justify-center gap-1.5 mt-2 flex-wrap">

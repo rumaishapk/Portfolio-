@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, Database, ArrowUpRight, Maximize2, X, Search, CheckCircle2 } from "lucide-react";
+import { Sparkles, Database, ArrowUpRight, Maximize2, X, Search } from "lucide-react";
 import { GithubIcon } from "./SocialIcons";
 
 interface Project {
@@ -23,7 +23,6 @@ interface Project {
 
 export default function ProjectsContentSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects: Project[] = [
     {
@@ -179,8 +178,6 @@ export default function ProjectsContentSection() {
               return (
                 <div
                   key={proj.id}
-                  onMouseEnter={() => setHoveredIndex(idx)}
-                  onMouseLeave={() => setHoveredIndex(null)}
                   onClick={() => setSelectedProject(proj)}
                   style={{ backgroundColor: proj.bgColor }}
                   className="relative group cursor-pointer transition-all duration-300 ease-out flex flex-col justify-between p-4 sm:p-5 border-b md:border-b-0 md:border-r last:border-r-0 border-black/10 overflow-hidden"

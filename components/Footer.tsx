@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowUp, Mail, Phone, Heart } from "lucide-react";
+import { ArrowUp, Mail, Phone } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-stone-400 max-w-sm leading-relaxed">
-              Frontend & Full-Stack Developer specializing in Next.js, TypeScript, cloud deployments, and AI integrations. Building products that feel effortless.
+              Junior Software Engineer specializing in Next.js, TypeScript, cloud deployments, and AI integrations. Building products that feel effortless.
             </p>
             <div className="pt-2 flex items-center gap-2 text-xs text-stone-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />

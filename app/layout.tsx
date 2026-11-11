@@ -13,13 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rumaisha — Frontend & Full-Stack Developer",
+  title: "Rumaisha — Junior Software Engineer",
   description:
-    "Portfolio of Rumaisha, a Frontend & Full-Stack Developer specializing in Next.js, TypeScript, React, Docker, GCP, and AI-powered systems.",
+    "Portfolio of Rumaisha, a Junior Software Engineer specializing in Next.js, TypeScript, React, Docker, GCP, and AI-powered systems.",
   keywords: [
     "Rumaisha",
+    "Junior Software Engineer",
     "Frontend Developer",
-    "Full-Stack Developer",
+    "Software Engineer",
     "Next.js Portfolio",
     "React Developer",
     "TypeScript",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Rumaisha" }],
   openGraph: {
-    title: "Rumaisha — Frontend & Full-Stack Developer",
+    title: "Rumaisha — Junior Software Engineer",
     description:
       "Crafting high-impact web applications with Next.js, TypeScript, Cloud DevOps, and AI integrations.",
     type: "website",
