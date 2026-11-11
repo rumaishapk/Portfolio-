@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, Database, ArrowUpRight, Maximize2, X, Search } from "lucide-react";
+import { Sparkles, ArrowUpRight, Maximize2, X, Search, ShieldAlert } from "lucide-react";
 import { GithubIcon } from "./SocialIcons";
 
 interface Project {
@@ -74,24 +74,26 @@ export default function ProjectsContentSection() {
     {
       id: 3,
       numberStr: "3",
-      title: "RAG Engine",
-      subtitle: "Vector Search & Document Intelligence",
-      category: "AI & Vector Architecture",
+      title: "Interrogation Room",
+      subtitle: "AI Murder Mystery Game",
+      category: "Full-Stack & Generative AI",
       bgColor: "#759374", // Sage green like reference column 3
       textColor: "#ffffff",
       accentColor: "#d1e7d0",
       description:
-        "Retrieval-Augmented Generation (RAG) platform indexing unstructured documents into Pinecone vector databases. Utilizes Gemini API embeddings to perform cosine similarity searches with zero-hallucination citations.",
+        "A single-player AI murder mystery investigation game where players question generative AI suspects with dynamic alibis, analyze clues, and cross-examine witness testimonies to solve procedurally generated cases.",
       details: [
-        "High-dimensional vector embedding generation",
-        "Pinecone index management and top-K similarity filtering",
-        "Dynamic prompt injection with source citations",
-        "Fast document ingestion pipeline",
+        "Single-player murder mystery game where players investigate cases by questioning AI-powered suspects",
+        "Dynamic AI case generation engine synthesizing suspects, clues, alibis, and crime scene forensics",
+        "Integrated AI conversations to let players question suspects and collect crucial investigation data",
+        "Designed separate admin and user gameplay interfaces with secure authentication",
+        "Used PostgreSQL to store and manage cases, suspects, clues, and investigation data",
+        "Built a responsive, atmospheric user interface using Next.js, React, TypeScript, and Tailwind CSS",
       ],
-      techStack: ["Pinecone", "Gemini API", "Next.js", "TypeScript", "Node.js"],
+      techStack: ["Next.js", "React.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Generative AI"],
       githubUrl: "https://github.com/rumaishapk",
       liveUrl: "https://github.com/rumaishapk",
-      highlights: "Pinecone Vector DB • Semantic RAG • Gemini Embeddings",
+      highlights: "AI-Powered Suspects • Dynamic Case Engine • PostgreSQL DB",
     },
     {
       id: 4,
@@ -235,27 +237,39 @@ export default function ProjectsContentSection() {
                     )}
 
                     {idx === 2 && (
-                      // Mockup 3: Pinecone RAG Embeddings Card
-                      <div className="relative w-32 h-36 bg-emerald-950/90 rounded-2xl p-2 shadow-2xl border-2 border-white/20 flex flex-col justify-between">
-                        <div className="flex items-center justify-between text-white text-[7.5px] font-bold">
-                          <span className="flex items-center gap-1">
-                            <Database className="w-2.5 h-2.5 text-emerald-400" /> Pinecone
+                      // Mockup 3: Interrogation Room AI Murder Mystery Dossier
+                      <div className="relative w-34 h-38 bg-stone-950/90 rounded-2xl p-2 shadow-2xl border-2 border-white/20 flex flex-col justify-between">
+                        <div className="flex items-center justify-between text-white text-[7.5px] font-bold pb-1 border-b border-stone-800">
+                          <span className="flex items-center gap-1 text-amber-300">
+                            <ShieldAlert className="w-2.5 h-2.5 text-amber-400" /> Case #402
                           </span>
-                          <span className="text-[6.5px] text-emerald-300">1536-dim</span>
+                          <span className="text-[6px] font-mono px-1 py-0.5 rounded bg-rose-950 text-rose-300 font-bold border border-rose-800">
+                            REC ●
+                          </span>
                         </div>
-                        <div className="h-16 w-full bg-emerald-900/40 rounded-lg p-1.5 flex flex-col justify-around border border-emerald-500/20">
-                          <div className="flex items-center justify-between text-[6.5px] text-emerald-200">
-                            <span>Similarity:</span>
-                            <span className="font-mono font-bold text-white">0.984</span>
+
+                        <div className="bg-stone-900/90 rounded-lg p-1.5 border border-stone-700/60 my-1 space-y-1">
+                          <div className="flex items-center justify-between text-[6.5px]">
+                            <span className="font-bold text-stone-200">Suspect: Butler Vance</span>
+                            <span className="text-[6px] text-amber-400 font-mono bg-amber-950/60 px-1 py-0.5 rounded">
+                              Alibi: Weak
+                            </span>
                           </div>
-                          <div className="w-full bg-emerald-950 rounded-full h-1 overflow-hidden">
-                            <div className="bg-emerald-400 h-full w-[95%]" />
+                          <div className="bg-stone-950/80 rounded p-1 text-[6px] text-stone-300 border-l-2 border-amber-400">
+                            &ldquo;In the study... alone.&rdquo;
                           </div>
-                          <div className="text-[6px] text-emerald-300 flex items-center gap-1">
-                            <Sparkles className="w-2 h-2 text-yellow-300" /> Gemini API Augmented
+                          <div className="flex items-center justify-between text-[5.5px] text-stone-400 pt-0.5">
+                            <span>Clues: 4/5</span>
+                            <span className="text-emerald-400 font-mono">PostgreSQL Synced</span>
                           </div>
                         </div>
-                        <div className="text-[6px] text-center text-emerald-200 font-mono">Vector Ingestion: Active</div>
+
+                        <div className="bg-emerald-950/70 border border-emerald-800/50 rounded px-1.5 py-0.5 flex items-center justify-between text-[6px] text-emerald-300 font-mono">
+                          <span className="flex items-center gap-1">
+                            <Sparkles className="w-2 h-2 text-yellow-300" /> AI Interrogation Live
+                          </span>
+                          <span className="text-stone-400">Next.js</span>
+                        </div>
                       </div>
                     )}
 
